@@ -1,10 +1,14 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import joblib
 import numpy as np
 import os
 
 # Initialize Flask app
 app = Flask(__name__)
+
+# Enable CORS for all routes, allowing requests from any origin
+CORS(app)  # You can restrict origins later if needed (e.g., CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}}))
 
 # Load the model and scaler
 model = joblib.load('./Predictmodel.pkl')
