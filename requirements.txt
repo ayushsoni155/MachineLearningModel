@@ -4,3 +4,4 @@ gunicorn==23.0.0
 joblib==1.4.2
 numpy==2.2.3
 scikit-learn==1.5.2  # Add this line (use the latest version or match your training environment)
+requests==2.31.0
